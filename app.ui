@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>865</width>
+    <height>556</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MNQ</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="application-menu">
+    <normaloff>.</normaloff>.</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="minimumSize">
+       <size>
+        <width>112</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>112</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>111</width>
+         <height>122</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QRadioButton" name="simple_butt">
+          <property name="text">
+           <string>y = ax</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="mean_butt">
+          <property name="text">
+           <string>y = a</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="linreg_butt">
+          <property name="text">
+           <string>y = ax + b</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="calcul_butt">
+          <property name="text">
+           <string>Посчитать</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>111</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Зависимость</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="plot">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>865</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuExport">
+    <property name="title">
+     <string>Export</string>
+    </property>
+    <addaction name="actionSave_plot"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_report"/>
+    <addaction name="separator"/>
+    <addaction name="actionView_table"/>
+   </widget>
+   <widget class="QMenu" name="menuContact">
+    <property name="title">
+     <string>Contact</string>
+    </property>
+    <addaction name="actionGithub"/>
+    <addaction name="separator"/>
+    <addaction name="actionTelegram"/>
+   </widget>
+   <widget class="QMenu" name="menuImport">
+    <property name="title">
+     <string>Import</string>
+    </property>
+    <addaction name="actionExcel_table"/>
+    <addaction name="separator"/>
+    <addaction name="actionCSV_table"/>
+    <addaction name="separator"/>
+    <addaction name="actionChoose_columns"/>
+   </widget>
+   <addaction name="menuImport"/>
+   <addaction name="menuExport"/>
+   <addaction name="menuContact"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionExcel_table">
+   <property name="text">
+    <string>Excel table</string>
+   </property>
+  </action>
+  <action name="actionCSV_table">
+   <property name="text">
+    <string>CSV table</string>
+   </property>
+  </action>
+  <action name="actionSave_plot">
+   <property name="text">
+    <string>Save plot</string>
+   </property>
+  </action>
+  <action name="actionSave_report">
+   <property name="text">
+    <string>Save report</string>
+   </property>
+  </action>
+  <action name="actionGithub">
+   <property name="text">
+    <string>Github</string>
+   </property>
+  </action>
+  <action name="actionTelegram">
+   <property name="text">
+    <string>Telegram</string>
+   </property>
+  </action>
+  <action name="actionChoose_columns">
+   <property name="text">
+    <string>Choose columns</string>
+   </property>
+  </action>
+  <action name="actionView_table">
+   <property name="text">
+    <string>View table</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
