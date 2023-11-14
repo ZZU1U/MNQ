@@ -40,12 +40,23 @@ def table_warning():
     msg.exec_()
 
 
+def calculation_warning():
+    msg = QMessageBox()
+    msg.setIcon(QMessageBox.Warning)
+    msg.setText("Постройте график")
+    msg.setInformativeText("Сначала постройте график, что-бы проверить его правильность")
+    msg.setWindowTitle("Не построен график")
+    msg.setStandardButtons(QMessageBox.Ok)
+    msg.exec_()
+
+
 class MNQ(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('app.ui', self)
         self.data = None
         self.method = 0
+        self.is_calculated = False;
 
         self.x_column = None
         self.y_column = None
@@ -66,12 +77,15 @@ class MNQ(QMainWindow):
 
     def lrb(self):
         self.method = 3
+        self.is_calculated = False
 
     def srb(self):
         self.method = 2
+        self.is_calculated = False
 
     def mb(self):
         self.method = 1
+        self.is_calculated = False
 
     def load_csv(self):
         csv_file = QFileDialog.getOpenFileName(self, 'Open file', '', "CSV table (*.csv)")[0]
@@ -99,6 +113,8 @@ class MNQ(QMainWindow):
         if self.data is None:
             table_warning()
             return
+
+        self.is_calculated = False;
 
         self.x_column, ok_pressed = QInputDialog.getItem(
             self, "Выберите столбец с зависимой переменной", "Какой столбец содержит зависимою переменную?",
@@ -155,6 +171,11 @@ class MNQ(QMainWindow):
 
         self.plot.setAlignment(PyQt5.QtCore.Qt.AlignCenter)
         self.plot.show()
+
+    def save_to_html(self):
+        if not self.is_calculated:
+            calculation_warning()
+            return
 
 
 if __name__ == '__main__':

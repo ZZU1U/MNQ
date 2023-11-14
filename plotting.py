@@ -9,12 +9,15 @@ def make_plot(X: np.array, Y: np.array, model: LinearRegression | SimpleRegressi
     plt.cla()
     plt.clf()
 
+    # Styling and plotting
+    plt.style.use('Solarize_Light2')
+
     plt.scatter(X, Y, color='b')
     plt.plot(X, model.predict(X), color='r', )
 
     if X_label is not None:
         plt.xlabel(X_label)
-    
+
     if Y_label is not None:
         plt.ylabel(Y_label)
 
