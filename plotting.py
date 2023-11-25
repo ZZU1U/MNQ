@@ -2,7 +2,6 @@ import numpy as np
 from matplotlib import pyplot as plt
 from calculating import *
 
-
 def make_plot(X: np.array, Y: np.array, model: LinearRegression | SimpleRegression | MeanValue,\
               X_label: None | str = None, Y_label: None | str = None, filename: str = 'plot.png'):
     # First cleaning our last plot
