@@ -1,6 +1,6 @@
-import numpy as np
 from matplotlib import pyplot as plt
 from calculating import *
+
 
 def make_plot(X: np.array, Y: np.array, model: LinearRegression | SimpleRegression | MeanValue,\
               X_label: None | str = None, Y_label: None | str = None, filename: str = 'plot.png'):
@@ -8,8 +8,8 @@ def make_plot(X: np.array, Y: np.array, model: LinearRegression | SimpleRegressi
     plt.cla()
     plt.clf()
 
-    # Styling and plotting
-    plt.style.use('Solarize_Light2')
+    # Styling
+    plt.style.use('bmh')
 
     plt.scatter(X, Y, color='b')
     plt.plot(X, model.predict(X), color='r', )
@@ -20,4 +20,5 @@ def make_plot(X: np.array, Y: np.array, model: LinearRegression | SimpleRegressi
     if Y_label is not None:
         plt.ylabel(Y_label)
 
-    plt.savefig(filename)
+    # Saving
+    plt.savefig(filename, transparent=True, dpi=200)

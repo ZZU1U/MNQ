@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mnq"
+version = "0.1.0"
+description = "MNK program alternative"
+authors = ["zulu <zzu1u@list.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "*"
+numpy = "*"
+matplotlib = "*"
+scikit-learn = "*"
+fpdf = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
