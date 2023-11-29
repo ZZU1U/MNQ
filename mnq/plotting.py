@@ -2,11 +2,13 @@ from matplotlib import pyplot as plt
 from calculating import *
 
 
-def make_plot(X: np.array, Y: np.array, model: LinearRegression | SimpleRegression | MeanValue,\
-              X_label: None | str = None, Y_label: None | str = None, filename: str = 'plot.png'):
+def get_plot(X: np.array, Y: np.array, model: LinearRegression | SimpleRegression | MeanValue,\
+              X_label: None | str = None, Y_label: None | str = None):
     # First cleaning our last plot
     plt.cla()
     plt.clf()
+
+    fig = plt.figure()
 
     # Styling
     plt.style.use('bmh')
@@ -20,5 +22,5 @@ def make_plot(X: np.array, Y: np.array, model: LinearRegression | SimpleRegressi
     if Y_label is not None:
         plt.ylabel(Y_label)
 
-    # Saving
-    plt.savefig(filename, transparent=True, dpi=200)
+    # Returning
+    return fig

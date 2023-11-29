@@ -149,7 +149,7 @@
    </property>
    <widget class="QMenu" name="menuExport">
     <property name="title">
-     <string>Export</string>
+     <string>Экспорт</string>
     </property>
     <addaction name="actionSave_plot"/>
     <addaction name="separator"/>
@@ -159,7 +159,7 @@
    </widget>
    <widget class="QMenu" name="menuContact">
     <property name="title">
-     <string>Contact</string>
+     <string>Контакты</string>
     </property>
     <addaction name="actionGithub"/>
     <addaction name="separator"/>
@@ -167,7 +167,7 @@
    </widget>
    <widget class="QMenu" name="menuImport">
     <property name="title">
-     <string>Import</string>
+     <string>Импорт</string>
     </property>
     <addaction name="actionExcel_table"/>
     <addaction name="separator"/>
@@ -182,22 +182,22 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionExcel_table">
    <property name="text">
-    <string>Excel table</string>
+    <string>Excel</string>
    </property>
   </action>
   <action name="actionCSV_table">
    <property name="text">
-    <string>CSV table</string>
+    <string>CSV</string>
    </property>
   </action>
   <action name="actionSave_plot">
    <property name="text">
-    <string>Save plot</string>
+    <string>Сохранить график</string>
    </property>
   </action>
   <action name="actionSave_report">
    <property name="text">
-    <string>Save report</string>
+    <string>Сохранить работу</string>
    </property>
   </action>
   <action name="actionGithub">
@@ -212,12 +212,12 @@
   </action>
   <action name="actionChoose_columns">
    <property name="text">
-    <string>Choose columns</string>
+    <string>Выбрать столбцы</string>
    </property>
   </action>
   <action name="actionView_table">
    <property name="text">
-    <string>View table</string>
+    <string>Показать таблицу</string>
    </property>
   </action>
  </widget>
