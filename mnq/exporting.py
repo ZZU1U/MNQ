@@ -16,13 +16,23 @@ def export_pdf(student: str, info: str, model: LinearRegression | SimpleRegressi
     pdf.add_page()
 
     # Info
-    pdf.set_font('Helvetica', '', 24)
+    try:
+        pdf.add_font('Helvetic', '', './mnq/times.ttf', True)
+    except:
+        pass
+
+    try:
+        pdf.add_font('Helvetic', '', './times.ttf', True)
+    except:
+        pass
+    
+    pdf.set_font('Helvetic', '', 24)
     pdf.cell(40, 10, info, ln=1)
 
-    pdf.set_font('Helvetica', '', 20)
+    pdf.set_font('Helvetic', '', 20)
     pdf.cell(40, 10, student, ln=1)
 
-    pdf.set_font('Helvetica', '', 14)
+    pdf.set_font('Helvetic', '', 14)
     pdf.cell(40, 10, 'Полученные результаты:', ln=1)
     pdf.cell(40, 10, f'Вид зависимости {model.name(x_label, y_label)}', ln=1)
     pdf.cell(40, 10, f'Найденные коэфиценты {model.info()}', ln=1)

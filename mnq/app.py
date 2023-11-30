@@ -310,6 +310,8 @@ class MNQ(QMainWindow):
         self.table.show()
 
     def save_report(self):
+        # TODO fix reports
+
         if not self.is_calculated:
             calculation_warning('сохранить работу')
             return
@@ -321,7 +323,7 @@ class MNQ(QMainWindow):
         if not ok_pressed:
             return
 
-        export_pdf(name, work, self.model, self.data, self.x_column, self.y_column, file_name, self)
+        export_pdf(name, work, self.model, self.data, self.x_column, self.y_column, self.fig, file_name)
 
     def save_plot(self):
         if not self.is_calculated:
